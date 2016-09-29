@@ -9,7 +9,7 @@ var {
 } = ReactNative;
 
 var MaterialSwitch = React.createClass({
-  padding: 2,
+  padding: 5,
 
   getDefaultProps() {
     return {
@@ -213,10 +213,8 @@ var MaterialSwitch = React.createClass({
             left: 1
           }}>
           <Animated.View style={[{
-              backgroundColor:
-                this.state.state
-                  ? (this.state.pressed? this.props.activeButtonPressedColor : this.props.activeButtonColor)
-                  : (this.state.pressed? this.props.inactiveButtonPressedColor : this.props.inactiveButtonColor),
+            backgroundColor:
+              this.state.state ? this.props.activeButtonColor : this.props.inactiveButtonColor,
               height: this.props.buttonRadius*2,
               width: this.props.buttonRadius*2,
               borderRadius: this.props.buttonRadius,
@@ -226,7 +224,8 @@ var MaterialSwitch = React.createClass({
               position: 'absolute',
               top: halfPadding + this.props.switchHeight/2 - this.props.buttonRadius,
               left: this.props.switchHeight/2 > this.props.buttonRadius ? halfPadding : halfPadding + this.props.switchHeight/2 - this.props.buttonRadius,
-              transform: [{ translateX: this.state.position }]
+              transform: [{ translateX: this.state.position }],
+              elevation: 5
             },
             this.props.buttonShadow]}
           >

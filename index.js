@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react'
+import import React, { Component, PropTypes } from 'react'
 import {
   PanResponder,
   View,
@@ -152,7 +152,7 @@ export default class MaterialSwitch extends Component{
         toValue: this.state.width,
         duration: this.props.switchAnimationTime,
       }
-    ).start();
+    ).start(this.isPropsChangedAfter);
   }
 
   deactivateAnimate = () => {
@@ -162,8 +162,21 @@ export default class MaterialSwitch extends Component{
         toValue: 0,
         duration: this.props.switchAnimationTime,
       }
-    ).start();
+    ).start(this.isPropsChangedAfter);
+  }
 
+  isPropsChangedAfter = () => {
+    if(this._timer){
+      clearTimeout(this._timer)
+    }
+    this._timer = setTimeout(() => {
+      if(this.props.value && this.state.position._value !== this.state.width){
+        this.activateAnimate()
+      }
+      if(!this.props.value && this.state.position._value !== 0){
+        this.deactivateAnimate()
+      }
+    }, this.props.switchAnimationTime + 50)
   }
 
   activate = () => {
@@ -196,14 +209,14 @@ export default class MaterialSwitch extends Component{
   }
 
   componentWillReceiveProps(nextProps){
-    setTimeout(() => {
+    if(nextProps.value !== this.props.value){
       if(nextProps.value && this.state.position._value !== this.state.width){
         this.activateAnimate()
       }
       if(!nextProps.value && this.state.position._value !== 0){
         this.deactivateAnimate()
       }
-    }, 200)
+    }
   }
 
   render() {

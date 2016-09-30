@@ -1,5 +1,5 @@
 {
-  "name": "react-native-material-switch",
+  "name": "react-native-material-switch-finale",
   "version": "1.0.0",
   "description": "Customizable material style switch",
   "main": "index.js",
@@ -34,7 +34,7 @@
   "bugs": {
     "url": "https://github.com/Nes1k/react-native-material-switch/issues"
   },
-  "homepage": "https://github.com/recr0ns/react-native-material-switch",
+  "homepage": "https://github.com/Nes1k/react-native-material-switch",
   "peerDependencies": {
     "react-native": ">= 0.19.0"
   }

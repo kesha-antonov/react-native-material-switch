@@ -1,6 +1,6 @@
 {
   "name": "react-native-material-switch",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "description": "Customizable material style switch",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/Recr0ns/react-native-material-switch.git"
+    "url": "git+ssh://git@github.com/Nes1k/react-native-material-switch.git"
   },
   "keywords": [
     "react-native",
@@ -32,7 +32,7 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/recr0ns/react-native-material-switch/issues"
+    "url": "https://github.com/Nes1k/react-native-material-switch/issues"
   },
   "homepage": "https://github.com/recr0ns/react-native-material-switch",
   "peerDependencies": {

@@ -1,4 +1,4 @@
-import import React, { Component, PropTypes } from 'react'
+import React, { Component, PropTypes } from 'react'
 import {
   PanResponder,
   View,
